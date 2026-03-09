@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github Issue Tracker</title>
+
+  <!-- tailwind css and daisyui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- Font style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- css file -->
+  <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+
+<body>
+  <header class="w-[90%] sm:w-[520px] sm:h-[743px] mx-auto my-10 shadow-lg rounded-2xl">
+    <div class="text-center">
+      <img class="image pt-[20px] mx-auto" src="./assets/github-logo.png" alt="">
+      <h1 class="font-bold text-[24px]  mt-[24px]">GitHub Issues Tracker</h1>
+      <h2 class="text-[#64748B] mt-[4px]">Sign in to manage your issues</h2>
+    </div>
+    <div class="card w-full shrink-0 mx-auto ">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label">Username</label>
+          <input id="userName" type="text" class="input w-full " placeholder="Enter Username" value="admin" />
+          <label class="label">Password</label>
+          <input id="password" type="password" class="input w-full" placeholder="Password" />
+          <button id="signin_btn" class="btn btn-primary mt-4">Sign In</button>
+        </fieldset>
+      </div>
+
+      <div class="flex items-center gap-4 mx-7 my-4">
+        <hr class="flex-1 border-gray-300">
+        <span class="text-gray-600 text-sm">OR</span>
+        <hr class="flex-1 border-gray-300">
+      </div>
+
+      <div class="text-center">
+        <h2 class="text-[#64748B] mt-[4px] my-2">Demo Credentials:</h2>
+        <div class="text-[#64748B] mt-[4px] m-7 p-8  bg-gray-100 rounded">
+          <h2>Username: admin</h2>
+          <h2>Password: admin123</h2>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- javascript file -->
+  <script src="./scripts/index_script.js"></script>
+
+</body>
+
+</html>
