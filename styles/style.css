@@ -1,3 +1,35 @@
 *{
    font-family: "Geist", sans-serif;
 }
+.high{
+   font-size: small;
+   background: #FEECEC;
+   color: #EF4444;
+   height: 24px;
+   width: 80px;
+   border-radius: 100px;
+}
+.help{
+   font-size: small;
+   background: #FFF8DB;
+   color: #dcaf0b;
+   height: 24px;
+   width: 112px;
+   border-radius: 100px;
+}
+.low{
+   font-size: small;
+   background: rgb(237, 235, 235);
+   color: rgb(107, 106, 106);
+   height: 24px;
+   width: 80px;
+   border-radius: 100px;
+}
+.medium{
+   font-size: small;
+   background: #FFF8DB;
+   color: #dcaf0b;
+   height: 24px;
+   width: 80px;
+   border-radius: 100px;
+}

@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Github Issue Tracker</title>
+
+  <!-- tailwind css and daisyui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- Font style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- css file -->
+  <link rel="stylesheet" href="./styles/style.css">
+
 </head>
+
 <body>
-  
+
+  <header>
+    <div class="lg:flex navbar bg-base-100 shadow-sm justify-between px-[80px] sm:grid sm:gap-4 ">
+      <div class="flex m-2 pl-6">
+        <img class="w-[40px] h-[40px]" src="./assets/github-logo.png" alt="">
+        <a class="btn btn-ghost text-2xl text-center">GitHub Issues Tracker</a>
+      </div>
+      <div class="flex gap-4">
+        <div>
+          <label class="input">
+            <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input type="search" required placeholder="Search" />
+          </label>
+        </div>
+        <div>
+          <button class="btn btn-primary"><i class="fa-solid fa-plus"></i>New Issue</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-9/12 mx-auto">
+    <section class=" shadow-sm my-8 p-4 rounded flex gap-4">
+      <button id="all" class="btn btn-soft btn-primary w-25">All</button>
+      <button class="btn btn-soft btn-primary w-25">Open</button>
+      <button class="btn btn-soft btn-primary w-25">Closed</button>
+    </section>
+
+    <section class="rounder shadow-sm">
+      <div class="shadow-sm flex justify-between p-2 ">
+        <div class="flex items-center gap-2">
+          <div>
+            <img class="w-[40px] h-[40px]" src="./assets/Aperture.png" alt="">
+          </div>
+          <div>
+            <h1 class="text-[20px]"><span>50</span> Issues</h1>
+            <h1 class="text-[#64748B]">Track and manage your project issues</h1>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 pr-4">
+          <div class="open w-4 h-4 bg-[#00A96E] rounded-full"></div>
+          <h1>Open</h1>
+          <div class="open w-4 h-4 bg-[#A855F7] rounded-full"></div>
+          <h1>Closed</h1>
+        </div>
+      </div>
+
+      <div id="issues" class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 m-4">
+        
+      </div>
+    </section>
+  </main>
+
+  <!-- javascript file -->
+  <script src="./scripts/home_script.js"></script>
+
 </body>
+
 </html>
