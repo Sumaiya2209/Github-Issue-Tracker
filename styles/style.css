@@ -33,3 +33,7 @@
    width: 80px;
    border-radius: 100px;
 }
+.active{
+   background-color: var(--color-primary);
+   color: white;
+}

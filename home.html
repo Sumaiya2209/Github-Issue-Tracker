@@ -53,8 +53,8 @@
   <main class="w-9/12 mx-auto">
     <section class=" shadow-sm my-8 p-4 rounded flex gap-4">
       <button id="all" class="btn btn-soft btn-primary w-25">All</button>
-      <button class="btn btn-soft btn-primary w-25">Open</button>
-      <button class="btn btn-soft btn-primary w-25">Closed</button>
+      <button id="open" class="btn btn-soft btn-primary w-25">Open</button>
+      <button id="closed" class="btn btn-soft btn-primary w-25">Closed</button>
     </section>
 
     <section class="rounder shadow-sm">
@@ -64,7 +64,7 @@
             <img class="w-[40px] h-[40px]" src="./assets/Aperture.png" alt="">
           </div>
           <div>
-            <h1 class="text-[20px]"><span>50</span> Issues</h1>
+            <h1 class="text-[20px]"><span id="count_issues"></span> Issues</h1>
             <h1 class="text-[#64748B]">Track and manage your project issues</h1>
           </div>
         </div>
