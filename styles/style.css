@@ -16,6 +16,7 @@
    height: 24px;
    width: 112px;
    border-radius: 100px;
+   text-align: center;
 }
 .low{
    font-size: small;
