@@ -5,18 +5,22 @@
    font-size: small;
    background: #FEECEC;
    color: #EF4444;
-   height: 24px;
-   width: 80px;
-   border-radius: 100px;
+   padding: 8px;
+   border-radius: 6px;
 }
 .help{
    font-size: small;
+   background: #BBFFD0 ;
+   color: #00A96E;
+   padding: 8px;
+   border-radius: 6px;
+}
+.enhancement{
+   font-size: small;
    background: #FFF8DB;
    color: #dcaf0b;
-   height: 24px;
-   width: 112px;
-   border-radius: 100px;
-   text-align: center;
+   padding: 8px;
+   border-radius: 6px;
 }
 .low{
    font-size: small;
