@@ -78,7 +78,6 @@ const displayIssues = (issues) => {
 
 all_issues();
 
-
 const filterButtons = document.querySelectorAll("#all, #open, #closed");
 
 filterButtons.forEach(btn => {
@@ -111,7 +110,6 @@ function filterIssues(status) {
 
     });
 }
-
 
 const displayDetails = (issues) => {
   const detailsBox = document.getElementById("details");
@@ -185,7 +183,6 @@ const createElement = (arr) => {
 
 
 document.getElementById("search_box").addEventListener('keyup', function(event){
-
   const input = event.target.value;
   const searchValue = input.trim().toLowerCase();
 
@@ -195,5 +192,4 @@ document.getElementById("search_box").addEventListener('keyup', function(event){
       const allIssues = json.data;
       displayIssues(allIssues);
     });
-    
 });
