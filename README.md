@@ -10,7 +10,7 @@
 <p>The spread operator (...) expands elements of an array or object into individual values.
 It is often used to copy arrays/objects or merge them easily.</p>
 
-<h3>3️⃣ Difference between map(), filter(), and forEach()</h3>
+<h3>3️⃣ Difference between map(), filter(), and forEach()?</h3>
 
 <ul>
   <li><strong>map()</strong> creates a new array by transforming each element.</li>
