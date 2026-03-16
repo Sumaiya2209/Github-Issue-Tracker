@@ -1,10 +1,26 @@
 const all_issues = () => {
+  manageSpinner(true);
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     .then(res => res.json())
-    .then((json) => displayIssues(json.data));
+    .then((json) => {
+      displayIssues(json.data);
+       manageSpinner(false);
+    });
 };
 
+const manageSpinner = (status) =>{
+  if (status == true){
+    document.getElementById("spinner").classList.remove("hidden");
+    document.getElementById("issues").classList.add("hidden");
+  }
+  else{
+     document.getElementById("spinner").classList.add("hidden");
+    document.getElementById("issues").classList.remove("hidden");
+  }
+}
+
 const displayIssues = (issues) => {
+
   const issuesPage = document.getElementById('issues');
   issuesPage.innerHTML = "";
 
@@ -57,6 +73,7 @@ const displayIssues = (issues) => {
   }
   const updateCount = document.getElementById("count_issues");
   updateCount.textContent = issues.length;
+
 }
 
 all_issues();
@@ -66,6 +83,8 @@ const filterButtons = document.querySelectorAll("#all, #open, #closed");
 
 filterButtons.forEach(btn => {
   btn.addEventListener("click", () => {
+
+    document.getElementById("search_box").value = "";
 
     filterButtons.forEach(b => b.classList.remove("active"));
 
@@ -78,11 +97,13 @@ filterButtons.forEach(btn => {
 });
 
 function filterIssues(status) {
+  manageSpinner(true);
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     .then(res => res.json())
     .then(data => {
       const filtered = data.data.filter(issue => issue.status === status);
       displayIssues(filtered);
+       manageSpinner(false);
 
       const count = filtered.length;
       const updateCount = document.getElementById("count_issues");
@@ -161,3 +182,18 @@ const createElement = (arr) => {
     </span>`
   ).join("");
 };
+
+
+document.getElementById("search_box").addEventListener('keyup', function(event){
+
+  const input = event.target.value;
+  const searchValue = input.trim().toLowerCase();
+
+  fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchValue}`)
+    .then(res => res.json())
+    .then((json) => {
+      const allIssues = json.data;
+      displayIssues(allIssues);
+    });
+    
+});

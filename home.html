@@ -40,7 +40,7 @@
                 <path d="m21 21-4.3-4.3"></path>
               </g>
             </svg>
-            <input type="search" required placeholder="Search" />
+            <input id="search_box" type="search" required placeholder="Search" />
           </label>
         </div>
         <div>
@@ -55,6 +55,10 @@
       <button id="all" class="btn btn-soft btn-primary w-25">All</button>
       <button id="open" class="btn btn-soft btn-primary w-25">Open</button>
       <button id="closed" class="btn btn-soft btn-primary w-25">Closed</button>
+    </section>
+
+    <section id="spinner" class="flex justify-center items-center hidden">
+      <span class="loading loading-spinner loading-xl"></span>
     </section>
 
     <section class="rounder shadow-sm">

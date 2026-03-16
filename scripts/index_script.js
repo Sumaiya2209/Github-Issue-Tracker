@@ -11,5 +11,3 @@ document.getElementById("signin_btn").addEventListener('click', function(){
     pin.value = "";
   }
 })
-
-console.log("hi")
